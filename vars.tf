@@ -11,7 +11,7 @@ variable "vpcId" {
 }
 
 variable "region" {
-  default = "us-east-2"
+  default = "${ secrets.AWS_REGION }"
 }
 
 variable "rdsUser" {
