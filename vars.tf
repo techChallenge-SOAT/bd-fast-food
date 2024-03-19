@@ -3,29 +3,25 @@ variable "projectName" {
 }
 
 variable "subnet" {
-  default = "<inserir-subnet-id>"
+  default = "subnet-052bc7647ee2fadf0"
 }
 
 variable "vpcId" {
-  default = "<inserir-vpc-id>"
+  default = "vpc-0b8dd4f56f9ebc85f"
 }
 
 variable "region" {
-  default = "<inserir-region>"
+  default = "us-east-2"
 }
 
 variable "rdsUser" {
-  description = "Inserir usuario do banco em secrets"
+  description = "${ secrets.RDS_USER }"
 }
 
 variable "rdsPass" {
-  description = "Inserir senha do banco em secrets"
+  description = "${ secrets.RDS_PASSWORD }"
 }
 
 variable "vpcCIDR" {
-   default = "<inserir-vpc-CIDR>" # example: 10.10.0.0/16
-}
-
-variable "subnet" {
-   default = "<inserir-subnet-id>"
+  default = "172.31.0.0/16"
 }
